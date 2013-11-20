@@ -1,0 +1,148 @@
+//classes only for debug
+
+.debug{
+    background: grey;
+    min-height: 200px;
+}
+
+.row{
+    max-width: 80em;
+    margin: 0 auto;
+    
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+        
+}
+
+
+.column{
+   display: block;
+   float: left;
+   .margin-manager();
+   
+    @media all and(min-width:@largeBreakPoint){
+        margin: @distanceSmall;
+        width: 100% - (@distanceSmall * 2);
+    }
+    
+    @media all and(max-width:@mediumBreakPoint){
+        margin: @distanceMedium;
+        width: 100% - (@distanceMedium * 2);
+
+    }
+    
+    @media all and(max-width:@smallBreakPoint){
+        margin: @distanceLarge;
+        width: 100% - (@distanceLarge * 2);
+    }    
+   
+    &:after{
+        content: "here";
+        display: block;
+        clear: both;
+    }
+
+}
+
+@media all and(min-width:@largeBreakPoint){
+    
+    .large-6{
+
+        @media all and(min-width:@largeBreakPoint){
+            margin: @distanceSmall;
+            width: 50% - (@distanceSmall * 2);
+        }
+        
+        @media all and(max-width:@mediumBreakPoint){
+            margin: @distanceMedium;
+            width: 50% - (@distanceMedium * 2);
+    
+        }
+        
+        @media all and(max-width:@smallBreakPoint){
+            margin: @distanceLarge;
+            width: 50% - (@distanceLarge * 2);
+        }  
+    }
+}
+
+
+//margins
+
+.margin-manager(){
+    @media all and(min-width:@largeBreakPoint){
+        margin: @distanceSmall;
+    }
+    
+    @media all and(max-width:@mediumBreakPoint){
+        margin: @distanceMedium;
+
+    }
+    
+    @media all and(max-width:@smallBreakPoint){
+        margin: @distanceLarge;
+    }    
+}
+
+.width-manager(@width: 100%,@distance:2.5%,){
+    
+    
+        width: @width - (@distance * 2);
+
+    
+
+    
+}
+
+
+//text-alignment
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+.small-align-center{
+    text-align: center;
+}
+
+.medium-align-center{
+    text-align: center;
+}
+
+.large-align-center{
+    text-align: center;
+}
+
+.small-align-left{
+    text-align: left;
+}
+
+.medium-align-left{
+    text-align: left;
+}
+
+.large-align-left{
+    text-align: left;
+}
+
+.small-align-right{
+    text-align: right;
+}
+
+.medium-align-right{
+    text-align: right;
+}
+
+.large-align-right{
+    text-align: right;
+}
