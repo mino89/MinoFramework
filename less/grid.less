@@ -51,24 +51,31 @@
     
     .large-6{
 
-        @media all and(min-width:@largeBreakPoint){
             margin: @distanceSmall;
             width: 50% - (@distanceSmall * 2);
-        }
         
-        @media all and(max-width:@mediumBreakPoint){
-            margin: @distanceMedium;
-            width: 50% - (@distanceMedium * 2);
-    
-        }
-        
-        @media all and(max-width:@smallBreakPoint){
-            margin: @distanceLarge;
-            width: 50% - (@distanceLarge * 2);
-        }  
+
     }
 }
 
+@media all and(max-width:@mediumBreakPoint){
+    .medium-6{
+
+            margin: @distanceMedium;
+            width: 50% - (@distanceMedium * 2);
+        
+    }
+    
+}
+        
+@media all and(max-width:@smallBreakPoint){
+    .small-6{
+
+            margin: @distanceLarge;
+            width: 50% - (@distanceLarge * 2);
+        
+    }
+}
 
 //margins
 
@@ -85,16 +92,6 @@
     @media all and(max-width:@smallBreakPoint){
         margin: @distanceLarge;
     }    
-}
-
-.width-manager(@width: 100%,@distance:2.5%,){
-    
-    
-        width: @width - (@distance * 2);
-
-    
-
-    
 }
 
 
