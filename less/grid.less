@@ -24,18 +24,15 @@
    .margin-manager();
    
     @media all and(min-width:@largeBreakPoint){
-        margin: @distanceSmall;
         width: 100% - (@distanceSmall * 2);
     }
     
     @media all and(max-width:@mediumBreakPoint){
-        margin: @distanceMedium;
         width: 100% - (@distanceMedium * 2);
 
     }
     
     @media all and(max-width:@smallBreakPoint){
-        margin: @distanceLarge;
         width: 100% - (@distanceLarge * 2);
     }    
    
@@ -47,23 +44,26 @@
 
 }
 
+// columns width
+
+
 @media all and(min-width:@largeBreakPoint){
     
     .large-6{
-
-            margin: @distanceSmall;
             width: 50% - (@distanceSmall * 2);
-        
-
+    }
+    
+    .large-2{
+            width: 25% - (@distanceSmall * 2);
     }
 }
 
 @media all and(max-width:@mediumBreakPoint){
     .medium-6{
-
-            margin: @distanceMedium;
             width: 50% - (@distanceMedium * 2);
-        
+    }
+    .medium-2{
+            width: 25% - (@distanceMedium * 2);
     }
     
 }
@@ -71,9 +71,11 @@
 @media all and(max-width:@smallBreakPoint){
     .small-6{
 
-            margin: @distanceLarge;
             width: 50% - (@distanceLarge * 2);
         
+    }
+    .small-2{
+            width: 25% - (@distanceLarge * 2);
     }
 }
 
