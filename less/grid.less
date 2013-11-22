@@ -2,7 +2,7 @@
 
 .debug{
     background: grey;
-    min-height: 200px;
+   
     border: 1px solid #fff;
 }
 
@@ -15,24 +15,12 @@
   
 }
 
-[class*='large-']:last-of-type {
-  padding-right: @distanceBase ;
-  float: right;
-}
-
-
 [class*='medium-'] {
   float: left;
   padding:  @distanceBase;
   position: relative;
   
 }
-
-[class*='medium-']:last-of-type {
-  padding-right: @distanceBase ;
-  float: right;
-}
-
 
 [class*='small-'] {
   float: left;
@@ -41,10 +29,7 @@
   
 }
 
-[class*='small-']:last-of-type {
-  padding-right: @distanceBase ;
-  float: right;
-}
+
 
 .row{
     max-width: 80em;
@@ -100,7 +85,7 @@
     .small-3  {width:25%;}
     .small-4  {width:33.33333%;}
     .small-5  {width:41.66667%;}
-    .small-6  {width:50%);}
+    .small-6  {width:50%;}
     .small-7  {width:58.33333%;}
     .small-8  {width:66.66667%;}
     .small-9  {width:75%;}
@@ -197,4 +182,10 @@
 
 .large-align-right{
     text-align: right;
+}
+
+//addings
+
+.additional-padding{
+    padding: 20px !important;
 }
