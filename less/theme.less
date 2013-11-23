@@ -18,10 +18,33 @@
     }
     
 }
+/*some visual styles*/
+.border-break-title{
+    border-bottom: 1px dotted @bordersColor;
+    word-spacing: normal;
+    margin-bottom: @distanceBase;
+}
 
+.caption{
+    font-size: 12px;
+    color: lighten(@evidenceColor, 50%);
+    @media all and(max-width:@mediumBreakPoint){
+        padding-top: @distanceBase;
+        display: block;
+    }
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+//header styles
 .logo{
     display: block;
     float: left;
+    font-size: 1em;
 }
 
 .mobile-menu{
@@ -32,6 +55,7 @@
     }
 }
 
+//mobile navigation
 @media all and(max-width:@mediumBreakPoint){
 
 	.mobile-navigation{
@@ -43,11 +67,6 @@
             -ms-transform: translate3d(0,0,0);
             -o-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
-            -webkit-transition: max-height 1s;
-            -moz-transition: max-height 1s;
-            -ms-transition: max-height 1s;
-            -o-transition: max-height 1s;
-            transition: max-height 1s;
             -webkit-transition: padding 1s;
             -moz-transition: padding 1s;
             -ms-transition: padding 1s;
@@ -56,19 +75,52 @@
 	}
         .mobile-navigation li{
             max-height: 0px;
-	    overflow-y: hidden;
+	    -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+	    -webkit-transition: max-height 1s;
+            -moz-transition: max-height 1s;
+            -ms-transition: max-height 1s;
+            -o-transition: max-height 1s;
+            transition: max-height 1s;
         }
         
 	.mobile-navigation.opened {
 	    max-height: 4000px;
             padding: @distanceBase;
+	    -webkit-transition: padding 1s;
+            -moz-transition: padding 1s;
+            -ms-transition: padding 1s;
+            -o-transition: padding 1s;
+            transition: padding 1s;
+	    
+
 	}
         .mobile-navigation.opened li {
 	    max-height: 30px;
-            -webkit-transition: max-height 1s;
             -moz-transition: max-height 1s;
             -ms-transition: max-height 1s;
             -o-transition: max-height 1s;
             transition: max-height 1s;
 	}
+}
+
+//inline lists
+.inline-list{
+    display: block;
+    	@media all and(max-width:@mediumBreakPoint){
+	margin-left: @distanceBase * -1;
+    }
+}
+.inline-list li{
+    list-style: none;
+    float: left;
+    padding-left: @distanceBase;
+    &:first-child{
+	@media all and(min-width:@mediumBreakPoint){
+	padding-left:0;
+	}
+
+    }
 }

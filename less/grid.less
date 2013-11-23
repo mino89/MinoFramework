@@ -7,6 +7,10 @@
     font-size:@fontSizeBase;
     line-height: 1.5em;
 }
+//clear some styles
+h1,h2,h3,h4,.bold,.caption,.italic{
+        word-spacing: normal;
+}
 
 *,
 *:after,
@@ -29,7 +33,7 @@
     max-width: @max-width;
     margin: 0 auto;
     padding: @distanceBase 0;
-    text-align: center;
+    text-align: left;
     word-spacing: -0.3em;
     
     &:after {
@@ -200,5 +204,26 @@
 //paddings
 
 .additional-padding{
-    padding: 20px;
+    padding: @distanceBase;
 }
+
+.additional-padding-top{
+    padding-top: @distanceBase;
+}
+
+.additional-padding-bottom{
+    padding-bottom: @distanceBase;
+}
+
+.somall-additional-padding{
+    padding: @distanceBase / 2;
+}
+
+.small-additional-padding-top{
+    padding-top: @distanceBase / 2;
+}
+
+.small-additional-padding-bottom{
+    padding-bottom: @distanceBase / 2;
+}
+
