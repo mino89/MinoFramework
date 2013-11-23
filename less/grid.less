@@ -5,7 +5,7 @@
     font-family:@fontFamily;
     font-weight:@fontWeight;
     font-size:@fontSizeBase;
-    word-wrap:break-word;
+    line-height: 1.5em;
 }
 
 *,
@@ -24,20 +24,15 @@
     box-shadow: inset 0 0 0 1px #fff;
 }
 
-.grid-base-style{
-  float: left;
-  padding: @distanceBase ;
-  position: relative;
-}
 
-/* Attribute selector */
-[class*='large-'],[class*='medium-'],[class*='small-']{
-  .grid-base-style;
-}
 
 .row{
-    max-width: 80em;
+    max-width: @max-width;
     margin: 0 auto;
+    padding: @distanceBase 0;
+    text-align: left;
+    word-spacing: -0.3em;
+
     &:after {
     content: "";
     display: table;
@@ -45,17 +40,40 @@
   }
 }
 
+
+.grid-base-style{
+  width: 100%;   
+  display: inline-block;
+  padding: @distanceBase;
+  position: relative;
+  word-spacing: normal;
+  vertical-align: top;
+  min-width: 0em;
+}
+
+/* Attribute selector */
+[class*='large-'],[class*='medium-'],[class*='small-']{
+  .grid-base-style;
+}
+
+
+
 .column{
-    width: 100%;
-    padding: @distanceBase;
+    .grid-base-style;
+    
+    &:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 }
 
 /* Main Widths */
 
-.width-1  {width:8.33%;}
+.width-1  {width:8.333%;}
 .width-2  {width:16.66667%;}
 .width-3  {width:25%;}
-.width-4  {width:33.33333%;}
+.width-4  {width:33.33334%;}
 .width-5  {width:41.66667%;}
 .width-6  {width:50%;}
 .width-7  {width:58.33333%;}
@@ -96,7 +114,7 @@
 }
 
 @media all and(max-width:@smallBreakPoint){
-    .small-1  {.width-1;}
+    .small-1  {.width-1; padding: @distanceBase 4%;}
     .small-2  {.width-2;}
     .small-3  {.width-3;}
     .small-4  {.width-4;}
