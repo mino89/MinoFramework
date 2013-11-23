@@ -22,7 +22,6 @@
 .border-break-title{
     border-bottom: 1px dotted @bordersColor;
     word-spacing: normal;
-    margin-bottom: @distanceBase;
 }
 
 .caption{
@@ -122,5 +121,27 @@
 	padding-left:0;
 	}
 
+    }
+}
+
+
+//side navigation
+
+.side-navigation{
+
+    li{
+	list-style: none;
+	border-bottom: 1px dotted @bordersColor;
+	padding-bottom: @distanceBase / 4;
+	margin-bottom: @distanceBase / 4;
+	text-decoration: none;
+    }
+    
+    .title{
+	border-bottom: none;
+    }
+    
+    ul{
+	margin-bottom: @distanceBase;
     }
 }
