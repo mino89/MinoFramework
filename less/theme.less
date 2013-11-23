@@ -37,16 +37,38 @@
 	.mobile-navigation{
 	    max-height: 0px;
 	    overflow-y: hidden;
-	    transition-duration: .5s;
-	    transition-property: all;
-	    -moz-transition-duration: .5s;
-	    -moz-transition-property: all;
-            -webkit-transition-duration: .5s;
-	    -webkit-transition-property: all;
-	    padding: 0 @distanceBase;
+            padding: 0 @distanceBase;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: max-height 1s;
+            -moz-transition: max-height 1s;
+            -ms-transition: max-height 1s;
+            -o-transition: max-height 1s;
+            transition: max-height 1s;
+            -webkit-transition: padding 1s;
+            -moz-transition: padding 1s;
+            -ms-transition: padding 1s;
+            -o-transition: padding 1s;
+            transition: padding 1s;
 	}
+        .mobile-navigation li{
+            max-height: 0px;
+	    overflow-y: hidden;
+        }
+        
 	.mobile-navigation.opened {
-	    max-height: 20000px;
+	    max-height: 4000px;
             padding: @distanceBase;
+	}
+        .mobile-navigation.opened li {
+	    max-height: 30px;
+            -webkit-transition: max-height 1s;
+            -moz-transition: max-height 1s;
+            -ms-transition: max-height 1s;
+            -o-transition: max-height 1s;
+            transition: max-height 1s;
 	}
 }
