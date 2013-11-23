@@ -3,10 +3,50 @@
     color: @light-color ;
     overflow: hidden;
     margin-bottom: @distanceBase;
+    
 }
 
 .header-content{
     max-width: @max-width;
     margin: 0 auto;
     padding: (@distanceBase / 2) @distanceBase;
+    
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+}
+
+.logo{
+    display: block;
+    float: left;
+}
+
+.mobile-menu{
+    display: block;
+    float: right;
+    i{
+        padding-left: @distanceBase / 4;
+    }
+}
+
+@media all and(max-width:@mediumBreakPoint){
+
+	.mobile-navigation{
+	    max-height: 0px;
+	    overflow-y: hidden;
+	    transition-duration: .5s;
+	    transition-property: all;
+	    -moz-transition-duration: .5s;
+	    -moz-transition-property: all;
+            -webkit-transition-duration: .5s;
+	    -webkit-transition-property: all;
+	    padding: 0 @distanceBase;
+	}
+	.mobile-navigation.opened {
+	    max-height: 20000px;
+            padding: @distanceBase;
+	}
 }
