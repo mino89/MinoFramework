@@ -1,3 +1,5 @@
+
+//header styles
 .header{
     background: @evidenceColor;
     color: @light-color ;
@@ -18,37 +20,27 @@
     }
     
 }
-/*some visual styles*/
-.border-break-title{
-    border-bottom: 1px dotted @bordersColor;
-    word-spacing: normal;
-}
 
-.caption{
-    font-size: 12px;
-    color: lighten(@evidenceColor, 50%);
-    @media all and(max-width:@mediumBreakPoint){
-        padding-top: @distanceBase;
-        display: block;
-    }
-    &:after{
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-//header styles
-.logo{
+.header-element{
     display: block;
-    float: left;
+    line-height: 1.5em;
+    vertical-align: middle;
     font-size: 1em;
 }
 
+
+.logo{
+    
+    float: left;
+
+}
+
 .mobile-menu{
-    display: block;
+    @media all and(min-width:@largeBreakPoint){
+	display: none;
+    }
     float: right;
+    cursor: pointer;
     i{
         padding-left: @distanceBase / 4;
     }
@@ -104,6 +96,28 @@
             transition: max-height 1s;
 	}
 }
+
+
+/*some visual styles*/
+.border-break-title{
+    border-bottom: 1px dotted @bordersColor;
+    word-spacing: normal;
+}
+
+.caption{
+    font-size: 12px;
+    color: lighten(@evidenceColor, 50%);
+    @media all and(max-width:@mediumBreakPoint){
+        padding-top: @distanceBase;
+        display: block;
+    }
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 
 //inline lists
 .inline-list{
