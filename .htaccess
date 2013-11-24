@@ -1,1 +1,2 @@
-AddType application/x-httpd-php .php .html
+RemoveHandler .html .htm
+AddType application/x-httpd-php .php .htm .html
