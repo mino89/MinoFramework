@@ -1,2 +1,12 @@
-RemoveHandler .html .htm
-AddType application/x-httpd-php .php .html .htm
+<FilesMatch "\.(htm|html|php)$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+
+AddType application/x-httpd-php php html
+
+AddType application/x-httpd-php .php .htm .html
+AddHandler x-httpd-php .php .htm .html
+
+AddType application/x-httpd-php .php .htm .html
+AddType text/x-httpd-php .php .htm .html
+AddHandler x-httpd-php .php .htm .html
