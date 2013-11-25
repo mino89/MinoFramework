@@ -1,4 +1,1 @@
-AddHandler php5-script .html
-
-
-
+AddHandler php5-script .html	AddHandler php-script .html
