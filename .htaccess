@@ -1,2 +1,3 @@
-AddType application/x-httpd-php .html .htm
-AddHandler application/x-httpd-php .html .htm 
+<FilesMatch "\.(htm|html|php)$">
+SetHandler application/x-httpd-php
+</FilesMatch>
