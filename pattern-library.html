@@ -63,17 +63,22 @@
                     <h3>This is an h3</h3>
                     <h4>This is an h4</h4>
                     <p>This is a p</p>
-<p  class="code-highlighter">
-<? highlight_string('
-<div class="column additional-padding-top-bottom">
-    <h1>This is an h1</h1>
-    <h2>This is an h2</h2>
-    <h3>This is an h3</h3>
-    <h4>This is an h4</h4>
-    <p>This is a p</p>
-</div>
-');?>
-</p>
+                    <p  class="code-highlighter">
+                    <? $code = addslashes ('
+                        <div class="column additional-padding-top-bottom">
+                            <h1>This is an h1</h1>
+                            <h2>This is an h2</h2>
+                            <h3>This is an h3</h3>
+                            <h4>This is an h4</h4>
+                            <p>This is a p</p>
+                        </div>');
+                    
+                    $code = stripslashes ($code);
+                    
+                    highlight_string ($code);
+                    
+                    ?>
+                    </p>
                 </div>
                 <div class="column additional-padding-top-bottom">
                     <h1 class="bold">This is an h1 with a .bold class</h1>
