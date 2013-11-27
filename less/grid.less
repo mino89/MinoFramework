@@ -52,6 +52,7 @@ h1,h2,h3,h4,.bold,.caption,.italic{
   vertical-align: top;
   min-width: 0em;
   text-align: left;
+  word-wrap: break-word;
     
 }
 
@@ -60,7 +61,7 @@ h1,h2,h3,h4,.bold,.caption,.italic{
   .grid-base-style;
 }
 
-.column{
+.sub-row{
     .grid-base-style;
     
     &:after {
@@ -72,7 +73,7 @@ h1,h2,h3,h4,.bold,.caption,.italic{
 
 /* Main Widths */
 
-.width-1  {width:8.333%;}
+.width-1  {width:8.3338%;}
 .width-2  {width:16.66667%;}
 .width-3  {width:25%;}
 .width-4  {width:33.33334%;}
@@ -130,7 +131,7 @@ h1,h2,h3,h4,.bold,.caption,.italic{
     .small-12 {.width-12;}
 }
 
-.column,
+.sub-row,
 .large-1,.large-2,.large-3,.large-4,.large-5,.large-6,.large-7,.large-8,.large-9,.large-10,.large-11,.large-12,
 .medium-1,.medium-2,.medium-3,.medium-4,.medium-5,.medium-6,.medium-7,.medium-8,.medium-9,.medium-10,.medium-11,.medium-12,
 .small-1,.small-2,.small-3,.small-4,.small-5,.small-6,.small-7,.small-8,.small-9,.small-10,.small-11,.small-12{
