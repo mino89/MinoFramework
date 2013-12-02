@@ -73,6 +73,10 @@
         
 	.mobile-navigation.opened {
 	    max-height: 4000px;
+	     transform: translateZ(0);
+	 -webkit-transform-style: preserve-3d;
+	 -webkit-backface-visibility: hidden;
+	 -webkit-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0);
 	    -webkit-transition: max-height 0.5s;
             -moz-transition: max-height 0.5s;
             -ms-transition: max-height 0.5s;
