@@ -50,38 +50,29 @@
 @media all and(max-width:@mediumBreakPoint){
 
 	.mobile-navigation{
-	    
-	 -webkit-transform: translateZ(0);
-	 -moz-transform: translateZ(0);
-	 -ms-transform: translateZ(0);
-	 -o-transform: translateZ(0);
-	 transform: translateZ(0);
-	 -webkit-transform-style: preserve-3d;
-	 -webkit-backface-visibility: hidden;
-	 -webkit-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0);
 	    max-height: 0px;
 	    overflow-y: hidden;
 	    padding: 0 @distanceBase;
-            -webkit-transition: max-height 0.5s;
-            -moz-transition: max-height 0.5s;
-            -ms-transition: max-height 0.5s;
-            -o-transition: max-height 0.5s;
-            transition: max-height 0.5s;
-	     
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: max-height 1s;
+            -moz-transition: max-height 1s;
+            -ms-transition: max-height 1s;
+            -o-transition: max-height 1s;
+            transition: max-height 1s;
 	    
 	}
         
 	.mobile-navigation.opened {
-	    max-height: 1000px;
-	     transform: translateZ(0);
-	 -webkit-transform-style: preserve-3d;
-	 -webkit-backface-visibility: hidden;
-	 -webkit-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0);
-	    -webkit-transition: max-height 0.5s;
-            -moz-transition: max-height 0.5s;
-            -ms-transition: max-height 0.5s;
-            -o-transition: max-height 0.5s;
-            transition: max-height 0.5s;
+	    max-height: 4000px;
+	    -webkit-transition: max-height 1s;
+            -moz-transition: max-height 1s;
+            -ms-transition: max-height 1s;
+            -o-transition: max-height 1s;
+            transition: max-height 1s;
 
 
 	}
