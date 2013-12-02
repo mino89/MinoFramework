@@ -50,14 +50,14 @@
 @media all and(max-width:@mediumBreakPoint){
 
 	.mobile-navigation{
+	 -webkit-transform: translateZ(0);
+	 -moz-transform: translateZ(0);
+	 -ms-transform: translateZ(0);
+	 -o-transform: translateZ(0);
+	 transform: translateZ(0);
 	    max-height: 0px;
 	    overflow-y: hidden;
 	    padding: 0 @distanceBase;
-            -webkit-transform: translate3d(0,0,0);
-            -moz-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            -o-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
             -webkit-transition: max-height 1s;
             -moz-transition: max-height 1s;
             -ms-transition: max-height 1s;
@@ -84,6 +84,7 @@
 .border-break-title{
     border-bottom: 1px dotted @bordersColor;
     word-spacing: normal;
+    padding-bottom: @distanceBase / 2;
 }
 
 .caption{
