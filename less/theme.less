@@ -51,7 +51,8 @@
 
 	.mobile-navigation{
 	    z-index: -1;
-	    overflow-y: hidden;
+	    position: relative;
+	    background: #ccc;
 	    -webkit-backface-visibility: hidden;
 	    -moz-backface-visibility: hidden;
 	    -ms-backface-visibility: hidden;
@@ -77,18 +78,25 @@
 	    -o-transition: opacity 0.6s ease-out;
 	    transition: opacity 0.6s ease-out;	    
 	    }
+	    &:before{
+		content: "";
+		width: 0; 
+		height: 0;
+		position: absolute;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #ccc;
+		margin-left: -5px;
+		left: 50%;
+		top: -10px;
+	    }
 	}
         
 	.mobile-navigation.opened {
 	    margin-top: 0;
 	    	*{
 		filter: alpha(opacity=1);
-		opacity: 1;
-		-webkit-transition: opacity 0.6s ease-in;
-		-moz-transition: opacity 0.6s ease-in;
-		-ms-transition: opacity 0.6s ease-in;
-		-o-transition: opacity 0.6s ease-in;
-		transition: opacity 0.6s ease-in;		
+		opacity: 1;	
 		}
 	}
 
