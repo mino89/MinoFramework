@@ -52,16 +52,21 @@
 	.mobile-navigation{
 	    z-index: -1;
 	    overflow-y: hidden;
-            -webkit-transform: translateZ(0);
-            -moz-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            -o-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-transition: margin-top 0.5s;
-            -moz-transition: margin-top 0.5s;
-            -ms-transition: margin-top 0.5s;
-            -o-transition: margin-top 0.5s;
-            transition: margin-top 0.5s;
+	    -webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    -ms-backface-visibility: hidden;
+	    backface-visibility: hidden;
+	    
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -moz-transform: translate3d(0, 0, 0);
+	    -ms-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	    
+            -webkit-transition: margin-top 1s ease-in;
+            -moz-transition: margin-top 1s ease-in;
+            -ms-transition: margin-top 1s ease-in;
+            -o-transition: margin-top 1s ease-in;
+            transition: margin-top 1s ease-in;
 	    
 	}
         
