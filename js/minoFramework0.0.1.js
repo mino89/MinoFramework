@@ -34,7 +34,7 @@ $(document).ready(function(){
             }
         }else{
             selector.css('margin-top', - (height + 100));
-
+    
         }
     });
 });
