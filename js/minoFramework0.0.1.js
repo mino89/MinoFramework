@@ -1,30 +1,31 @@
 //this is a js file
 
+var mq = window.matchMedia( "(max-width: 799px)" );
+var mqReturn = window.matchMedia( "(min-width: 800px)" );
+var selector = $('.js-mobile-navigation');
+var height = selector.outerHeight();
 
-
-
-$(document).ready(function(){
-    var mq = window.matchMedia( "(max-width: 799px)" );
-    var mqReturn = window.matchMedia( "(min-width: 800px)" );
-    var selector = $('.js-mobile-navigation');
-    var height = selector.outerHeight();
+if (mq.matches) {
+$(window).load(function(){ 
     
-    if (mq.matches) {
+        selector.css('margin-top', - (height + 100));
+   
+});
+}
+$(document).ready(function(){
+    $('.js-mobile-menu').click(function(){
         
-        selector.css('margin-top', - (height + 100));    
-        $('.js-mobile-menu').click(function(){
-            
-                if (selector.hasClass('opened')) {
-                  
-                    selector.removeClass('opened');
-                    selector.css('margin-top', - (height + 100));
-                }else{
-                    
-                  selector.removeAttr('style');
-                  selector.addClass('opened');
-                }
-        });
-    }
+            if (selector.hasClass('opened')) {
+              
+                selector.removeClass('opened');
+                selector.css('margin-top', - (height + 100));
+            }else{
+                
+              selector.removeAttr('style');
+              selector.addClass('opened');
+            }
+    });
+    
     
     $(window).resize(function(){
         if (mqReturn.matches) {
@@ -34,7 +35,9 @@ $(document).ready(function(){
             }
         }else{
             selector.css('margin-top', - (height + 100));
-    
+            if (selector.hasClass('opened')) {
+               selector.removeClass('opened'); 
+            }
         }
     });
 });
