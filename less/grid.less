@@ -5,12 +5,7 @@
     font-family:@fontFamily;
     font-weight:@fontWeight;
     font-size:@fontSizeBase;
-    line-height: 1.5em;
-}
-
-//clear some styles
-h1,h2,h3,h4,.bold,.caption,.italic{
-        word-spacing: normal;
+    line-height: 1.5rem;
 }
 
 *,
@@ -34,13 +29,14 @@ h1,h2,h3,h4,.bold,.caption,.italic{
     max-width: @max-width;
     margin: 0 auto;
     text-align: left;
-    word-spacing: -0.3em;
+    font-size: 0;
     
     &:after {
     content: "";
     display: table;
     clear: both;
   }
+  
 }
 
 .grid-base-style{
@@ -48,9 +44,9 @@ h1,h2,h3,h4,.bold,.caption,.italic{
   display: inline-block;
   padding: @distanceBase;
   position: relative;
-  word-spacing: normal;
+  font-size: 1rem;
   vertical-align: top;
-  min-width: 0em;
+  min-width: 0rem;
   text-align: left;
   word-wrap: break-word; 
 }
@@ -69,6 +65,8 @@ h1,h2,h3,h4,.bold,.caption,.italic{
     clear: both;
     }
 }
+
+
 
 /* Main Widths */
 
