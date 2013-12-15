@@ -50,7 +50,6 @@
 @media all and(max-width:799px){
 
 	.mobile-navigation{
-	    z-index: -1;
 	    position: relative;
 	    background: #ccc;
 	    -webkit-backface-visibility: hidden;
@@ -101,10 +100,6 @@
 .caption{
     font-size: 1rem;
     color: lighten(@evidenceColor, 50%);
-    @media all and(max-width:@mediumBreakPoint){
-        padding-top: @distanceBase;
-        display: block;
-    }
     &:after{
         content: "";
         display: table;

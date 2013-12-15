@@ -21,9 +21,14 @@
 
 .debug{
     background: #ededed;
-    box-shadow: inset 0 0 0 1px #fff;
+    border: 1px dotted #dadada;
    
 }
+
+
+
+//grid builder
+
 
 .row{
     max-width: @max-width;
@@ -36,8 +41,13 @@
     display: table;
     clear: both;
   }
-  
 }
+
+.cluster{
+.row;
+.add-vertical-margin;
+}
+
 
 .grid-base-style{
   width: 100%;   
@@ -54,18 +64,6 @@
 [class*='large-'],[class*='medium-'],[class*='small-']{
   .grid-base-style;
 }
-
-.sub-row{
-    .grid-base-style;
-    
-    &:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-}
-
-
 
 /* Main Widths */
 
@@ -127,16 +125,7 @@
     .small-12 {.width-12;}
 }
 
-.sub-row,
-.large-1,.large-2,.large-3,.large-4,.large-5,.large-6,.large-7,.large-8,.large-9,.large-10,.large-11,.large-12,
-.medium-1,.medium-2,.medium-3,.medium-4,.medium-5,.medium-6,.medium-7,.medium-8,.medium-9,.medium-10,.medium-11,.medium-12,
-.small-1,.small-2,.small-3,.small-4,.small-5,.small-6,.small-7,.small-8,.small-9,.small-10,.small-11,.small-12{
-    *{
-        padding: 0;
-    }
-}
-
-//text-alignment
+//force positioning
 
 .float-left{
     float: left;
@@ -149,6 +138,8 @@
 .clear{
     clear: both;
 }
+
+//text-alignment
 
 .align-center{
     text-align: center;
@@ -198,38 +189,7 @@
     text-align: right;
 }
 
-//paddings
-
-.additional-padding{
-    padding: @distanceBase;
-}
-
-.additional-padding-top{
-    padding-top: @distanceBase;
-}
-
-.additional-padding-top-bottom{
-    padding: @distanceBase 0;
-}
-.additional-padding-left-right{
-    padding: 0 @distanceBase;
-}
-.additional-padding-bottom{
-    padding-bottom: @distanceBase;
-}
-
-.somall-additional-padding{
-    padding: @distanceBase / 2;
-}
-
-.small-additional-padding-top{
-    padding-top: @distanceBase / 2;
-}
-
-.small-additional-padding-bottom{
-    padding-bottom: @distanceBase / 2;
-}
-
-.remove-padding{
-    padding: 0;
+//margins
+.add-vertical-margin{
+    margin: @distanceBase 0;
 }
