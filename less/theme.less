@@ -1,7 +1,20 @@
+//generic styles
 
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: @evidenceColor;
+    &:hover{
+	text-decoration: none;
+	color: darken(@evidenceColor, 10%);
+    }
+    &:visited{
+	text-decoration: none;
+    }
+}
 //header styles
 .header{
-    background: @evidenceColor;
+    background: @headerColor;
     color: @light-color ;
     overflow: hidden;
     margin-bottom: @distanceBase;
@@ -45,13 +58,39 @@
         padding-left: @distanceBase / 4;
     }
 }
+//images
+.img-container{
+    max-height: 15rem;
+    overflow: hidden;
+    img{
+	width: 100%;
+    }
+}
+
+//side navigation
+
+.side-navigation{
+
+    li{
+	list-style: none;
+	@media all and(min-width:799px){
+	border-bottom: 1px dotted @bordersColor;
+	}
+	text-decoration: none;
+    }
+    
+    .title{
+	border-bottom: none;
+    }
+    
+}
 
 //mobile navigation
 @media all and(max-width:799px){
 
 	.mobile-navigation{
 	    position: relative;
-	    background: #ccc;
+	    background: darken(@light-color,5%);
 	    -webkit-backface-visibility: hidden;
 	    -moz-backface-visibility: hidden;
 	    -ms-backface-visibility: hidden;
@@ -75,7 +114,7 @@
 		position: absolute;
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
-		border-bottom: 10px solid #ccc;
+		border-bottom: 10px solid darken(@light-color,5%);
 		margin-left: -5px;
 		left: 50%;
 		top: -10px;
@@ -99,7 +138,6 @@
 
 .caption{
     font-size: 1rem;
-    color: lighten(@evidenceColor, 50%);
     &:after{
         content: "";
         display: table;
@@ -111,43 +149,35 @@
 //inline lists
 .inline-list{
     display: block;
-    	@media all and(max-width:@mediumBreakPoint){
-	margin-left: @distanceBase * -1;
-    }
-}
-.inline-list li{
-    list-style: none;
-    float: left;
-    padding-left: @distanceBase;
-    &:first-child{
-	@media all and(min-width:@mediumBreakPoint){
-	padding-left:0;
-	}
-
-    }
-}
-
-
-//side navigation
-
-.side-navigation{
-
+    text-align: left;
     li{
+	display: inline-block;
 	list-style: none;
-	border-bottom: 1px dotted @bordersColor;
-	padding-bottom: @distanceBase / 4;
-	margin-bottom: @distanceBase / 4;
-	text-decoration: none;
+	padding-left: @distanceBase / 2;
+	&:first-child{
+	    
+	padding-left:0;
+	 
+    
+	}
+	ul{
+	    display: inline-block;
+	    li{
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	    }
+	}
+	i{
+	    display: inline-block;
+	}
     }
     
-    .title{
-	border-bottom: none;
-    }
-    
-    ul{
-	margin-bottom: @distanceBase;
-    }
 }
+
+
+
+
 //code highlight
 .code-highlighter{
     font-size: 0.8rem;

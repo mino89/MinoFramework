@@ -44,8 +44,8 @@
 .grid-base-style{
   width: 100%;   
   display: inline-block;
-  padding: @distanceBase;
   position: relative;
+  padding: @distanceBase / 2;
   font-size: 1rem;
   vertical-align: top;
   text-align: left;
@@ -184,4 +184,18 @@
 //margins
 .add-vertical-margin{
     margin: @distanceBase 0;
+}
+
+//paddings
+.no-padding{
+    padding: 0;
+}
+.add-padding{
+    padding: @distanceBase / 2;
+}
+.add-vertical-padding{
+    padding: @distanceBase / 2 0;
+}
+.add-horizontal-padding{
+    padding: 0 / 2 @distanceBase;
 }
