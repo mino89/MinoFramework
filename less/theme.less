@@ -49,6 +49,8 @@ a{
 }
 
 .mobile-menu{
+    color: @light-color;
+    cursor: pointer;
     @media all and(min-width:@largeBreakPoint){
 	display: none;
     }
@@ -56,6 +58,9 @@ a{
     cursor: pointer;
     i{
         padding-left: @distanceBase / 4;
+    }
+    &:hover{
+	color: darken(@light-color,10%);
     }
 }
 //images
@@ -169,6 +174,7 @@ a{
 	    }
 	}
 	i{
+	    color: @headerColor;
 	    display: inline-block;
 	}
     }
@@ -215,6 +221,34 @@ a{
     background: #feffc9;
     border: 1px dashed #f48262;
     color:#f48262;
+}
+
+//decorations
+
+.divider{
+    font-size: 1rem;
+    color: @headerColor;
+    position: relative;
+    padding: (@distanceBase * 2) 0;
+    i{
+    position: relative;
+    vertical-align: middle;
+    padding: 0px 0.001em;
+    background: @light-color;
+    z-index: 2;
+	&:nth-child(even){
+	    font-size: 1.5em;  
+	}
+    }
+    .line {
+    border-bottom: 1px dashed darken(@light-color,5%);
+    height: 1px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+}
 }
 
     
