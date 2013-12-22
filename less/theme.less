@@ -220,6 +220,7 @@ a{
 //decorations
 
 .divider{
+    clear: both;
     font-size: 1rem;
     color: @headerColor;
     position: relative;
@@ -242,7 +243,24 @@ a{
     top: 50%;
     width: 100%;
     z-index: 1;
-}
+    }
 }
 
-    
+// actions
+.action-container{
+    margin-top: 2em;
+}
+.action{
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0.5em 1.5em;
+}
+
+.primary{
+    background: @evidenceColor;
+    color: @light-color;
+    &:hover{
+	color: darken(@light-color,5%);
+	background: darken(@evidenceColor,5%);
+    }
+}
