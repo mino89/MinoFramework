@@ -8,7 +8,7 @@ var height = selector.outerHeight();
 if (mq.matches) {
 $(window).load(function(){ 
     
-        selector.css('margin-top', - (height + 100));
+        selector.css('margin-top', - (height + 100)).fadeOut();
    
 });
 }
@@ -17,12 +17,9 @@ $(document).ready(function(){
         
             if (selector.hasClass('opened')) {
               
-                selector.removeClass('opened');
-                selector.css('margin-top', - (height + 100));
+                selector.removeClass('opened').css('margin-top', - (height + 100)).fadeOut();
             }else{
-                
-              selector.removeAttr('style');
-              selector.addClass('opened');
+              selector.fadeIn().removeAttr('style').addClass('opened');
             }
     });
     
@@ -31,12 +28,12 @@ $(document).ready(function(){
         if (mqReturn.matches) {
             selector.removeAttr('style');
             if (selector.hasClass('opened')) {
-               selector.removeClass('opened'); 
+               selector.removeClass('opened').fadeOut(); 
             }
         }else{
-            selector.css('margin-top', - (height + 100));
+            selector.css('margin-top', - (height + 100)).fadeOut();
             if (selector.hasClass('opened')) {
-               selector.removeClass('opened'); 
+               selector.removeClass('opened');
             }
         }
     });
