@@ -12,6 +12,17 @@ a{
 	text-decoration: none;
     }
 }
+
+//article
+.article-head{
+    .border-bottom;
+}
+
+//borders style
+.border-bottom(){
+   border-bottom: 1px dashed darken(@light-color,5%);
+}
+
 //header styles
 .header{
     background: @headerColor;
@@ -65,7 +76,7 @@ a{
 }
 //images
 .img-container{
-    max-height: 15rem;
+    max-height: 20rem;
     overflow: hidden;
     img{
 	width: 100%;
@@ -79,7 +90,7 @@ a{
     li{
 	list-style: none;
 	@media all and(min-width:799px){
-	border-bottom: 1px dotted @bordersColor;
+	.border-bottom;
 	}
 	text-decoration: none;
     }
@@ -154,7 +165,7 @@ a{
 //inline lists
 .inline-list{
     display: block;
-    text-align: left;
+    
     li{
 	display: inline-block;
 	list-style: none;
@@ -217,6 +228,7 @@ a{
     color:#f48262;
 }
 
+
 //decorations
 
 .divider{
@@ -236,7 +248,7 @@ a{
 	}
     }
     .line {
-    border-bottom: 1px dashed darken(@light-color,5%);
+    .border-bottom;
     height: 1px;
     margin-top: -1px;
     position: absolute;
