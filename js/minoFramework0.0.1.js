@@ -7,11 +7,11 @@ var target = $('.side-navigation');
 var height = target.outerHeight();
 
 if (mq.matches) {
-$(window).load(function(){ 
+
     
-        selector.css('margin-top', - (height));
+    selector.css('margin-top', - (height));
    
-});
+
 }
 
 $(document).ready(function(){
@@ -21,7 +21,7 @@ $(document).ready(function(){
               
                 selector.removeClass('opened').css('margin-top', - (height));
             }else{
-              selector.removeAttr('style').addClass('opened');
+              selector.addClass('add-animation').removeAttr('style').addClass('opened');
             }
     });
     
