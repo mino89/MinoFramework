@@ -2,13 +2,14 @@
 
 var mq = window.matchMedia( "(max-width: 799px)" );
 var mqReturn = window.matchMedia( "(min-width: 800px)" );
-var selector = $('.js-mobile-navigation');
-var height = selector.outerHeight();
+var selector = $('.mobile-navigation');
+var target = $('.side-navigation');
+var height = target.outerHeight();
 
 if (mq.matches) {
 $(window).load(function(){ 
     
-        selector.css('margin-top', - (height + 100)).fadeOut();
+        selector.css('margin-top', - (height));
    
 });
 }
@@ -17,9 +18,9 @@ $(document).ready(function(){
         
             if (selector.hasClass('opened')) {
               
-                selector.removeClass('opened').css('margin-top', - (height + 100)).fadeOut();
+                selector.removeClass('opened').css('margin-top', - (height));
             }else{
-              selector.fadeIn().removeAttr('style').addClass('opened');
+              selector.removeAttr('style').addClass('opened');
             }
     });
     
@@ -28,10 +29,10 @@ $(document).ready(function(){
         if (mqReturn.matches) {
             selector.removeAttr('style');
             if (selector.hasClass('opened')) {
-               selector.removeClass('opened').fadeOut(); 
+               selector.removeClass('opened'); 
             }
         }else{
-            selector.css('margin-top', - (height + 100)).fadeOut();
+            selector.css('margin-top', - (height));
             if (selector.hasClass('opened')) {
                selector.removeClass('opened');
             }

@@ -23,6 +23,7 @@ a{
    border-bottom: 1px dashed darken(@light-color,5%);
 }
 
+header{position: relative; z-index: 2;}
 //header styles
 .header{
     background: @headerColor;
@@ -82,9 +83,57 @@ a{
     }
 }
 
+
+.animation(){
+
+	    -webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    -ms-backface-visibility: hidden;
+	    backface-visibility: hidden;
+	    
+	    -webkit-transition: margin-top 1s ease-in-out;
+            -moz-transition: margin-top 1s ease-in-out;
+            -ms-transition: margin-top 1s ease-in-out;
+            -o-transition: margin-top 1s ease-in-out;
+            transition: margin-top 1s ease-in-out;
+	    
+    	    -webkit-transform: translate3d(0, 0, 0);
+	    -moz-transform: translate3d(0, 0, 0);
+	    -ms-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	    
+
+}
+
+.add-animation{
+    .animation();
+}
+
 //side navigation
 
 .side-navigation{
+//mobile navigation
+@media all and(max-width:799px){
+
+
+	    background: darken(@light-color,5%);
+
+	    position: relative;
+	    z-index: 1;
+
+	    &:before{
+		content: "";
+		width: 0; 
+		height: 0;
+		position: absolute;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid darken(@light-color,5%);
+		margin-left: -5px;
+		left: 50%;
+		top: -10px;
+	    }
+}
 
     li{
 	list-style: none;
@@ -100,48 +149,17 @@ a{
     
 }
 
-//mobile navigation
+
+
 @media all and(max-width:799px){
-
-	.mobile-navigation{
-	    position: relative;
-	    background: darken(@light-color,5%);
-	    -webkit-backface-visibility: hidden;
-	    -moz-backface-visibility: hidden;
-	    -ms-backface-visibility: hidden;
-	    backface-visibility: hidden;
+.mobile-navigation{
+    	    .animation;
+    	&.opened {
+	    margin-top: 2rem;
 	    
-	    -webkit-transform: translate3d(0, 0, 0);
-	    -moz-transform: translate3d(0, 0, 0);
-	    -ms-transform: translate3d(0, 0, 0);
-	    transform: translate3d(0, 0, 0);
-	    
-            -webkit-transition: margin-top .3s ease-in-out;
-            -moz-transition: margin-top .3s ease-in-out;
-            -ms-transition: margin-top .3s ease-in-out;
-            -o-transition: margin-top .3s ease-in-out;
-            transition: margin-top .3s ease-in-out;
-	    
-	    &:before{
-		content: "";
-		width: 0; 
-		height: 0;
-		position: absolute;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 10px solid darken(@light-color,5%);
-		margin-left: -5px;
-		left: 50%;
-		top: -10px;
-	    }
 	}
-        
-	.mobile-navigation.opened {
-	    margin-top: 0;
-	}
-
+    }
 }
-
 
 /*some visual styles*/
 .border-break-title{
