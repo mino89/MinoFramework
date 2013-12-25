@@ -137,16 +137,22 @@ header{position: relative; z-index: 2;}
 
     li{
 	list-style: none;
+	&:last-child{
+	    .border-bottom;
+	}
 	@media all and(min-width:799px){
-	.border-bottom;
+	
 	}
 	text-decoration: none;
     }
     
     .title{
 	border-bottom: none;
+	padding-bottom: 1em;
     }
-    
+    .last-divider{
+	padding-top: 1em;
+    }
 }
 
 
