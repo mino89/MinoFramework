@@ -318,19 +318,22 @@ header{position: relative; z-index: 2;}
 }
 
 //forms
-.form-element{
+body .form-element{
     border: none;
     box-shadow: 0;
     border-radius: 0;
     background-image: none;
-    padding: 0.08rem 0.3rem;
+    padding: 0.3rem !important;
     border: 1px solid darken(@light-color,10%);	   
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     vertical-align: middle;
      -webkit-appearance:none;  
     -webkit-border-radius:0px;
     &[type="text"]{
 	background: @light-color;
+    }
+    &[type="button"]{
+	border: none;
     }
 }
 
