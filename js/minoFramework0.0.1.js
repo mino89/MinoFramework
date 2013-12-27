@@ -8,7 +8,7 @@ var height = target.outerHeight();
 var fbHeight = $('.fb-like-box').outerHeight();
 
 console.log(fbHeight);
-if (mq.matches) {
+if (mq.matches) { 
 
     
     selector.css('margin-top', - (height));
