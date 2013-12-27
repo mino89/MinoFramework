@@ -24,9 +24,9 @@ $(document).ready(function(){
               selector.addClass('add-animation').removeAttr('style').addClass('opened');
             }
     });
-    
-    
+
     $(window).resize(function(){
+
         if (mqReturn.matches) {
             selector.removeAttr('style');
             if (selector.hasClass('opened')) {
@@ -39,4 +39,7 @@ $(document).ready(function(){
             }
         }
     });
+    
+    
+    
 });

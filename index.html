@@ -12,6 +12,17 @@
     <title>Document</title>
 </head>
 <body class="minoFramework-init">
+
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=681624001868839";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
     <header>
         <div class="header">
             <div class="header-content">
@@ -21,8 +32,8 @@
         </div>
     </header>
     <section class="row mobile-navigation">
-    
-    <div class=" side-navigation large-3 ">
+
+    <div class="large-3 side-navigation">
         
         <ul class="add-padding">
             <li class="row">
@@ -53,11 +64,14 @@
         </ul>
         <ul class="add-padding">
             <li class="title"><h4><i class="fa fa-comments"></i><em>Ultimi commenti</em></h4></li>
-            <li></li>
+            <li>
+                <div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+            </li>
             <li class="last-divider"></li>  
         </ul>
     </div>
-    <div class="large-9">
+
+    <div class="large-9 float-right">
         <div class="row">
             <!-- start article -->
             <article>
