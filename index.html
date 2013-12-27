@@ -9,12 +9,10 @@
         <![endif]-->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">     
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Document</title> 
 </head>
 <body class="minoFramework-init">
-
-
-    
+  
     <header>
         <div class="header">
             <div class="header-content">
@@ -56,9 +54,7 @@
         </ul>
         <ul class="add-padding">
             <li class="title"><h4><i class="fa fa-comments"></i><em>Ultimi commenti</em></h4></li>
-            <li id="container">
-<div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-width="auto" data-height="auto" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-            </li>
+
             <li class="last-divider"></li>  
         </ul>
     </div>
@@ -184,33 +180,45 @@
                     </div>
                 </div>
             </article>
-            <!-- end article -->            
-         
-      
-      
+            <!-- end article -->  
         </div>
     </div>
 </section>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>    
-    <script type="text/javascript" src="js/minoFramework0.0.1.js"></script>
-<div id="fb-root"></div>
 
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=681624001868839";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+<section class="footer">
+    
+    <div class="row">
+        <div class="large-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium odio laudantium consectetur obcaecati atque sapiente quibusdam ipsa. Aut ipsum deserunt libero eaque necessitatibus autem perspiciatis alias cupiditate. Consectetur sunt quidem!</p> 
+        </div>
+        <div class="large-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium odio laudantium consectetur obcaecati atque sapiente quibusdam ipsa. Aut ipsum deserunt libero eaque necessitatibus autem perspiciatis alias cupiditate. Consectetur sunt quidem!</p> 
+        </div>
+        <div class="large-4">
+            <div id="container"></div>  
+        </div>
+    </div>
+</section>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-$(window).bind("load resize", function(){
-var container_width = $('#container').width();
-$('#container').html('<div class="fb-like-box" ' +
-'data-href="https://www.facebook.com/FacebookDevelopers"' +
-' data-width="' + container_width + '" data-height="200" data-show-faces="true" ' +
-'data-stream="false" data-header="false" data-show-border="false"></div>');
-FB.XFBML.parse( );
-}); 
-</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=681624001868839";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    $(window).bind("load resize", function(){
+    var container_width = $('#container').width();
+    $('#container').html('<div class="fb-like-box" ' +
+    'data-href="https://www.facebook.com/FacebookDevelopers"' +
+    ' data-width="' + container_width + '" data-height="200" data-show-faces="true" ' +
+    'data-stream="false" data-header="false" data-show-border="false"></div>');
+    FB.XFBML.parse( );
+    }); 
+    </script>
+        <script type="text/javascript" src="js/minoFramework0.0.1.js"></script>
 </body>
 </html>
