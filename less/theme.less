@@ -318,8 +318,9 @@ header{position: relative; z-index: 2;}
 }
 
 //forms
-.form-container{
+.form-fieldset{
     border:1px solid darken(@light-color,10%);
+    background: @light-color; 
     	@media all and(max-width:799px){
 	  border:1px solid @light-color;   
 	}
@@ -332,18 +333,22 @@ body .form-element{
     border-radius: 0;
     background-image: none;
     position: relative;
+    line-height: normal !important;
     height: 100%;
     padding: 0.3rem !important;
     //border: 1px solid darken(@light-color,10%);	   
     font-size: 1.1rem;
     vertical-align: middle;
-     -webkit-appearance:none;  
+    -webkit-appearance:none;  
     -webkit-border-radius:0px;
     &[type="text"]{
 	background: @light-color;
+	outline: none;
     }
-    &[type="button"]{
+    &[type="submit"]{
 	border: none;
+	cursor: pointer;
+	padding: 0.4rem !important;
     }
 }
 
