@@ -320,7 +320,9 @@ header{position: relative; z-index: 2;}
 //forms
 .form-fieldset{
     border:1px solid darken(@light-color,10%);
-    background: @light-color; 
+    background: @light-color;
+    border-radius: 2rem;
+    overflow: hidden;
     	@media all and(max-width:799px){
 	  border:1px solid @light-color;   
 	}
@@ -335,20 +337,22 @@ body .form-element{
     position: relative;
     line-height: normal !important;
     height: 100%;
-    padding: 0.3rem !important;
+    padding: 0.3rem 0.5rem !important;
     //border: 1px solid darken(@light-color,10%);	   
-    font-size: 1.1rem;
+    font-size: 1rem;
     vertical-align: middle;
     -webkit-appearance:none;  
     -webkit-border-radius:0px;
+    background: @light-color;
     &[type="text"]{
-	background: @light-color;
+
 	outline: none;
     }
     &[type="submit"]{
 	border: none;
 	cursor: pointer;
-	padding: 0.4rem !important;
+
+	color: @evidenceColor;
     }
 }
 
