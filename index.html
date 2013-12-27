@@ -56,7 +56,7 @@
         </ul>
         <ul class="add-padding">
             <li class="title"><h4><i class="fa fa-comments"></i><em>Ultimi commenti</em></h4></li>
-            <li>
+            <li id="container">
 <div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-width="auto" data-height="auto" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
             </li>
             <li class="last-divider"></li>  
@@ -201,6 +201,16 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=681624001868839";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>    
+}(document, 'script', 'facebook-jssdk'));
+
+$(window).bind("load resize", function(){
+var container_width = $('#container').width();
+$('#container').html('<div class="fb-like-box" ' +
+'data-href="https://www.facebook.com/adobegocreate"' +
+' data-width="' + container_width + '" data-height="730" data-show-faces="false" ' +
+'data-stream="true" data-header="true"></div>');
+FB.XFBML.parse( );
+}); 
+</script>
 </body>
 </html>
