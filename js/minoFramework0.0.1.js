@@ -5,7 +5,9 @@ var mqReturn = window.matchMedia( "(min-width: 800px)" );
 var selector = $('.mobile-navigation');
 var target = $('.side-navigation');
 var height = target.outerHeight();
+var fbHeight = $('.fb-like-box').outerHeight();
 
+console.log(fbHeight);
 if (mq.matches) {
 
     
