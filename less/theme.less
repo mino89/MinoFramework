@@ -318,11 +318,21 @@ header{position: relative; z-index: 2;}
 }
 
 //forms
+.form-container{
+    border:1px solid darken(@light-color,10%);
+    	@media all and(max-width:799px){
+	  border:1px solid @light-color;   
+	}
+	position: relative;
+}
+
 body .form-element{
     border: none;
     box-shadow: 0;
     border-radius: 0;
     background-image: none;
+    position: relative;
+    height: 100%;
     padding: 0.3rem !important;
     //border: 1px solid darken(@light-color,10%);	   
     font-size: 1.1rem;
